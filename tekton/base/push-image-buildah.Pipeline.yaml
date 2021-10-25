@@ -23,7 +23,7 @@ spec:
     - name: create-image
       params:
         - name: IMAGE
-          value: "$(params.image-repo):$(tasks.clone-repository.results.commit)"
+          value: "$(params.image-repo):$(tasks.git-clone.results.commit)"
       runAfter:
         - git-clone
       taskRef:
