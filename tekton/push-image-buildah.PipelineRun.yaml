@@ -8,7 +8,7 @@ spec:
     - name: source-repo
       value: https://github.com/cloud-native-garage-method-cohort/emea-7-credo-hufnagel-buildah
     - name: image-repo
-      value: https://quay.io/repository/timothy_credo/buildah_pipeline_assignment
+      value: quay.io/timothy_credo/buildah_pipeline_assignment
   pipelineRef:
     name: push-image-buildah
   workspaces:
