@@ -1,0 +1,22 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: push-image-buildah-
+spec:
+  serviceAccountName: build-bot
+  params:
+    - name: source-repo
+      value: https://github.com/cloud-native-garage-method-cohort/emea-7-credo-hufnagel-buildah
+    - name: image-repo
+      value: https://quay.io/repository/timothy_credo/buildah_pipeline_assignment
+  pipelineRef:
+    name: push-image-buildah
+  workspaces:
+    - name: pipeline-shared-data
+      volumeClaimTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce 
+          resources:
+            requests:
+              storage: 1Gi
