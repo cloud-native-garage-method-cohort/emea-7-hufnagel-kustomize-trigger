@@ -6,9 +6,9 @@ spec:
   serviceAccountName: build-bot
   params:
     - name: source-repo
-      value: https://github.com/cloud-native-garage-method-cohort/emea-7-credo-hufnagel-buildah
+      value: https://github.com/cloud-native-garage-method-cohort/emea-7-hufnagel-kustomize-trigger
     - name: image-repo
-      value: quay.io/timothy_credo/buildah_pipeline_assignment
+      value: quay.io/christian_hufnagel/express-sample-app
   pipelineRef:
     name: push-image-buildah
   workspaces:
