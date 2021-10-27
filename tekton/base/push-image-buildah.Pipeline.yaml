@@ -54,7 +54,7 @@ spec:
     - name: deploy
       params:
         - name: manifest
-          value: "$(context.pipelinRun.namespace)"
+          value: "$(tasks.create-configuration.results.manifest)"
         - name: app-namespace
           value: "$(context.pipelineRun.namespace)"
       runAfter:
