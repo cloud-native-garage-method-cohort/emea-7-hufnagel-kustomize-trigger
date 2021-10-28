@@ -7,4 +7,8 @@ resources:
 - deploy.Task.yaml
 - push-image-buildah.Pipeline.yaml
 - quay-io-credentials.Secret.yaml
+- git-credentials.Secret.yaml
 - webhook-receiver.EventListener.yaml
+- safe-configuration.Task.yaml
+- production-repository.ConfigMap.yaml
+
