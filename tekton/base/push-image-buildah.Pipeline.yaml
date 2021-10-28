@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: push-image-buildah
+  name: express-sample-app
 spec:
   params:
     - name: app-name
