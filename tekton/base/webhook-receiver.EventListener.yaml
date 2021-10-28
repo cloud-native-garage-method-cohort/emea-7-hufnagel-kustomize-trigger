@@ -25,21 +25,21 @@ spec:
         params:
           - name: app-name
             value: express-sample-app
-          - name: source-repo
-            value: https://github.com/cloud-native-garage-method-cohort/emea-7-hufnagel-kustomize-trigger
           - name: image-repo
             value: quay.io/christian_hufnagel/express-sample-app
+          - name: source-repo
+            value: https://github.com/cloud-native-garage-method-cohort/emea-7-hufnagel-kustomize-trigger
         pipelineRef:
           name: express-sample-app
         workspaces:
           - name: pipeline-shared-data
             volumeClaimTemplate:
               spec:
-                accessModes:
-                  - ReadWriteOnce 
                 resources:
                   requests:
                     storage: 1Gi
+                accessModes:
+                  - ReadWriteOnce
 ---
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
